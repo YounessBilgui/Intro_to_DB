@@ -21,7 +21,7 @@ try:
             cursor.close()
     else:
         print("Failed to connect to MySQL server.")
-except Error as e:
+except mysql.connector.Error as e:
     print(f"Error connecting to MySQL: {e}")
 finally:
     if 'connection' in locals() and connection.is_connected():
